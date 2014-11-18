@@ -1,0 +1,163 @@
+{
+  "basics": {
+    "name": "Emmanuel PAYET",
+    "picture": "https://media.licdn.com/mpr/mprx/0_oFea4EeCn52osLS2HQWj4doDNLWb4Qp2H5yl4dVyw6gBFGIuQ3ZGnWmtsSdZUTjhIXErcmXXZEVX",
+    "email": "jakspinning@gmail.com",
+    "phone": "0635222581",
+    "website": "",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Bordeaux Area, France",
+      "countryCode": "FR",
+      "region": ""
+    },
+    "profiles": []
+  },
+  "work": [
+    {
+      "company": "Cdiscount",
+      "position": "Software Engineer - Cooperative Education",
+      "website": "",
+      "startDate": "2013-10-01",
+      "summary": "Exploration and comprehension of the BigData module (MongoDB)\nCreation of web app utilities (NodeJS / AngularJS):\n- Data visualization\n- Web Services orchestration (SOAP / REST)\nParticipation in the OpenAPI project (C#)",
+      "highlights": []
+    },
+    {
+      "company": "Personalized Software Ltd",
+      "position": "Software Engineer",
+      "website": "",
+      "startDate": "2013-07-01",
+      "summary": "Sonar integration in the continuous integration process (Jenkins)\nWorked on the core architecture of the project BidRight (Java)\nCreated a RESTful API (Java / Jersey)\nCreated a scrapping web app (Python / Django)",
+      "highlights": [],
+      "endDate": "2013-09-01"
+    },
+    {
+      "company": "Cdiscount",
+      "position": "Software Developer - Cooperative Education",
+      "website": "",
+      "startDate": "2012-09-01",
+      "summary": "Mission: Developing a web service unit testing utility\nLanguages : C#",
+      "highlights": [],
+      "endDate": "2013-07-01"
+    },
+    {
+      "company": "Ecobox",
+      "position": "Web Developer - Intership",
+      "website": "",
+      "startDate": "2012-01-01",
+      "summary": "Developed a Google Map module for Dynmap (cartography software)\nLanguages: PHP/MySQL, JavaScript/AJAX",
+      "highlights": [],
+      "endDate": "2012-03-01"
+    }
+  ],
+  "education": [
+    {
+      "institution": "EPSI",
+      "area": "Computer Software Engineering",
+      "studyType": "BTS Informatique de Gestion, Option: software application developer",
+      "startDate": "2010-01-01",
+      "gpa": "",
+      "courses": [],
+      "endDate": "2015-01-01"
+    }
+  ],
+  "skills": [
+    {
+      "name": "JavaScript",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Node.js",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "AngularJS",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "NoSQL",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Unit Testing",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Continuous Integration",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Regression Testing",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "RESTful WebServices",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Linux",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Git",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Python",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Java",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Android",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "C#",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "PHP",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "C++",
+      "level": "",
+      "keywords": []
+    }
+  ],
+  "references": [],
+  "languages": [
+    {
+      "language": "Français",
+      "fluency": ""
+    },
+    {
+      "language": "Anglais",
+      "fluency": ""
+    },
+    {
+      "language": "Allemand",
+      "fluency": ""
+    }
+  ],
+  "volunteer": []
+}
