@@ -1,0 +1,203 @@
+{
+  "basics": {
+    "email": "contact@emmanuel-payet.me",
+    "name": "Emmanuel PAYET",
+    "label": "Software Engineer, searching for a challenging job in London",
+    "phone": "",
+    "website": "",
+    "summary": "I'm an experimented software engineer specialized in web technologies. I did 3 years of apprenticeship as part of my dual education (one week in a company, one week at school) combined with long internships. I have finished my studies in Bordeaux (France) and just landed in London. I am actively searching a challenging job to develop my technical skills.\n\nUntil recently, I was a software engineer in the R&D team of Cdiscount, e-commerce leader in France. I led several internal projects as well as the developer hub (API documentation and app management) of the Cdiscount openAPI. I was in charge of every step of these projects (conception, development, operations, maintenance). \nIn an every-day basis, I did research on new technologies and often organized workshops (e.g. coding dojos). I was also in charge of training a junior developer. My technical and communication skills were greatly improved.\n\nColleagues know me as a rigorous and enthusiast programmer who can always be trusted to come up with a new approach. I use as much as possible agile methodologies (like Extreme Programming) in my work and personal projects. Productivity is fundamental to me, and I set my toolbox in consequence (continuous delivery, version control, fitting IDE, etc.). I'm capable of handling every step of a project, but I also work well in a team.\n\nAt work, I gained experience in JavaScript, Java and Linux system. During my free time, I study new technologies on many subjects (web and mobile technologies, docker, microservices, video game development, raspberry pi, etc.). All of this makes me someone who tries to find the most effective solutions to computing problems.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "",
+      "region": ""
+    },
+    "profiles": []
+  },
+  "work": [
+    {
+      "company": "Cdiscount",
+      "position": "Software Engineer - Dual education",
+      "website": "",
+      "startDate": "2013-10-01",
+      "summary": "Created the developer hub (API documentation and app management) of the Cdiscount openAPI with public access. \nDeveloped several internal projects in web technologies (single-page applications, RESTful servers, NoSQL databases). \nAssured the correct implementation of agile methodologies, testing (TDD, integration tests, UI tests, etc.), automation (continuous integration and delivery, docker), and other good development practices (code review, pair programming, constant refactoring, etc.).\nStarted migration to microservices.\nActive technological monitoring and organization of knowledge sharing workshops (e.g. coding dojos).\nTrained a junior developer.\n\nTechnologies: OO JavaScript (ES6), AngularJS, NodeJS, MongoDB, Java, Kafka, Docker, Jenkins, git, linux, bower, gulp, karma, jasmine, protractor",
+      "highlights": [],
+      "endDate": "2015-07-01"
+    },
+    {
+      "company": "Personalized Software Ltd",
+      "position": "Software Engineer - Internship",
+      "website": "",
+      "startDate": "2013-07-01",
+      "summary": "Sonar integration in the continuous integration process (Jenkins)\nWorked on the core architecture of the project BidRight (Java)\nCreated a RESTful API (Java / Jersey)\nCreated a scraping web app (Python / Django)",
+      "highlights": [],
+      "endDate": "2013-09-01"
+    },
+    {
+      "company": "Cdiscount",
+      "position": "Software Developer - Dual Education",
+      "website": "",
+      "startDate": "2012-09-01",
+      "summary": "Developed in the web services team on different projects\nCreated an internal application of web service monitoring (SOAP / REST) to ease management and use of web services on different environments (production, dev, etc.), which improved the team productivity.\n\nLanguages : C#, SQL Server, Silverlight",
+      "highlights": [],
+      "endDate": "2013-07-01"
+    },
+    {
+      "company": "Ecobox",
+      "position": "Web Developer - Internship",
+      "website": "",
+      "startDate": "2012-01-01",
+      "summary": "Developed a Google Map module for Dynmap (cartography software)\nLanguages: PHP/MySQL, JavaScript/AJAX",
+      "highlights": [],
+      "endDate": "2012-03-01"
+    }
+  ],
+  "education": [
+    {
+      "institution": "EPSI (École Privée des Sciences Informatiques) - Computer Science Engineering Top School",
+      "area": "",
+      "studyType": "Master’s Degree",
+      "startDate": "2010-01-01",
+      "gpa": "",
+      "courses": [],
+      "endDate": "2015-01-01"
+    },
+    {
+      "institution": "Trois Mares High School, Reunion Island",
+      "area": "",
+      "studyType": "High School diploma (french baccalauréat)",
+      "startDate": "2007-01-01",
+      "gpa": "",
+      "courses": [],
+      "endDate": "2010-01-01"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Test Driven Development",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Microservices",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Heroku",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Linux",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Python",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Travis",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Git",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Android",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Node.js",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "C#",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "AngularJS",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "PHP",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "NoSQL",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "C++",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "RESTful WebServices",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "IntelliJ IDEA",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Unit Testing",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Continuous Integration",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "JavaScript",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Regression Testing",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Java",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Docker",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Vim",
+      "level": "",
+      "keywords": []
+    }
+  ],
+  "languages": [
+    {
+      "language": "French",
+      "fluency": "Native or bilingual"
+    },
+    {
+      "language": "English",
+      "fluency": "Full professional"
+    }
+  ]
+}
