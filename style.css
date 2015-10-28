@@ -1,8 +1,42 @@
 body{
     text-align: center;
+	font-family: Georgia;
 }
 
 ul {
     display: inline-block;
     text-align:left;
+}
+
+a:link {
+	text-decoration: none;
+	color: black;
+	border-bottom: 2px dashed #5882FA;
+}
+
+li {
+	padding-bottom: 3px;
+}
+
+a:visited {
+	color: black;
+	border-bottom: 1px dashed #AC58FA;
+}
+
+.rotate {
+	-webkit-transition-duration: 0.8s;
+	-moz-transition-duration: 0.8s;
+	-o-transition-duration: 0.8s;
+	transition-duration: 0.8s;
+
+	-webkit-transition-property: -webkit-transform;
+	-moz-transition-property: -moz-transform;
+	-o-transition-property: -o-transform;
+	transition-property: transform;
+}
+
+.rotate:hover {
+	-webkit-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);
+	-o-transform:rotate(360deg);
 }
