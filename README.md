@@ -1,3 +1,3 @@
-http://jmperezperez.com/linkedin-to-json-resume/
+Heey youu
 
-https://github.com/JMPerez/linkedin-to-json-resume
+TODO move the old way to anther repo
