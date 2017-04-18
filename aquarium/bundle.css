@@ -1,0 +1,118 @@
+body {
+  font-family: Lato, sans-serif;
+  margin: 0; }
+.button, .fish-list .fish-list__clear-button {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  outline: 0; }
+  .button:hover:not(:disabled), .fish-list .fish-list__clear-button:hover:not(:disabled) {
+    background-color: white;
+    color: black; }
+  .button:disabled, .fish-list .fish-list__clear-button:disabled {
+    opacity: .5;
+    cursor: not-allowed; }
+
+.button--primary {
+  background-color: cornflowerblue;
+  border: 1px solid cornflowerblue; }
+
+.button--secondary, .fish-list .fish-list__clear-button {
+  background-color: lightskyblue;
+  border: 1px solid lightskyblue; }
+
+.button--error {
+  background-color: red;
+  border: 1px solid red; }
+
+.fish-list {
+  flex-grow: 1; }
+  .fish-list .fish-list__clear-button {
+    margin-left: 10px; }
+  .fish-list .fish-list__list {
+    margin: 0;
+    padding: 0; }
+    .fish-list .fish-list__list .fish-list__list__item {
+      background: url(/eddf1cf3878dc8b26e9a792af9feefe6.ico) no-repeat left top;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 40px;
+      cursor: pointer;
+      list-style: none;
+      margin: 0; }
+      .fish-list .fish-list__list .fish-list__list__item:hover {
+        background-color: #f1f1f1; }
+  .fish-list .fish-list__empty {
+    padding-top: 10px; }
+.aquarium-main {
+  margin: 8px;
+  padding-bottom: 92px; }
+  .aquarium-main .aquarium-main__title {
+    text-align: center;
+    color: cornflowerblue; }
+  .aquarium-main .aquarium-main__fish-lists {
+    display: flex; }
+.button, .aquarium-toolbar .aquarium-toolbar__message .aquarium-toolbar__message__try-again-button, .aquarium-toolbar .aquarium-toolbar__buy-button {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  outline: 0; }
+  .button:hover:not(:disabled), .aquarium-toolbar .aquarium-toolbar__message .aquarium-toolbar__message__try-again-button:hover:not(:disabled), .aquarium-toolbar .aquarium-toolbar__buy-button:hover:not(:disabled) {
+    background-color: white;
+    color: black; }
+  .button:disabled, .aquarium-toolbar .aquarium-toolbar__message .aquarium-toolbar__message__try-again-button:disabled, .aquarium-toolbar .aquarium-toolbar__buy-button:disabled {
+    opacity: .5;
+    cursor: not-allowed; }
+
+.button--primary, .aquarium-toolbar .aquarium-toolbar__buy-button {
+  background-color: cornflowerblue;
+  border: 1px solid cornflowerblue; }
+
+.button--secondary {
+  background-color: lightskyblue;
+  border: 1px solid lightskyblue; }
+
+.button--error, .aquarium-toolbar .aquarium-toolbar__message .aquarium-toolbar__message__try-again-button {
+  background-color: red;
+  border: 1px solid red; }
+
+.aquarium-toolbar {
+  width: 100%;
+  background-color: #f1f1f1;
+  position: fixed;
+  bottom: 0;
+  height: 80px;
+  display: flex; }
+  .aquarium-toolbar .aquarium-toolbar__message {
+    flex-grow: 1;
+    align-self: center;
+    padding: 0 10px; }
+    .aquarium-toolbar .aquarium-toolbar__message .aquarium-toolbar__message__error-prefix {
+      font-weight: bold; }
+    .aquarium-toolbar .aquarium-toolbar__message .aquarium-toolbar__message__error {
+      font-style: italic; }
+    .aquarium-toolbar .aquarium-toolbar__message .aquarium-toolbar__message__try-again-button {
+      margin-left: 10px; }
+  .aquarium-toolbar .aquarium-toolbar__buy-button {
+    padding: 15px 32px;
+    height: 100%; }
+
+.appear-in-later {
+  opacity: 0;
+  animation: fade .5s linear;
+  animation-delay: 1s;
+  animation-fill-mode: forwards; }
+
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
