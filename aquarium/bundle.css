@@ -37,7 +37,7 @@ body {
     margin: 0;
     padding: 0; }
     .fish-list .fish-list__list .fish-list__list__item {
-      background: url(/eddf1cf3878dc8b26e9a792af9feefe6.ico) no-repeat left top;
+      background: url(./images/fish-eddf1cf3878dc8b26e9a792af9feefe6.ico) no-repeat left top;
       padding-top: 10px;
       padding-bottom: 10px;
       padding-left: 40px;
@@ -48,6 +48,11 @@ body {
         background-color: #f1f1f1; }
   .fish-list .fish-list__empty {
     padding-top: 10px; }
+
+@media (min-width: 576px) {
+  .fish-list--first {
+    border-right: 1px solid #f1f1f1;
+    margin-right: 5px; } }
 .aquarium-main {
   margin: 8px;
   padding-bottom: 92px; }
@@ -55,7 +60,11 @@ body {
     text-align: center;
     color: cornflowerblue; }
   .aquarium-main .aquarium-main__fish-lists {
-    display: flex; }
+    display: flex;
+    flex-direction: column; }
+    @media (min-width: 576px) {
+      .aquarium-main .aquarium-main__fish-lists {
+        flex-direction: row; } }
 .button, .aquarium-toolbar .aquarium-toolbar__message .aquarium-toolbar__message__try-again-button, .aquarium-toolbar .aquarium-toolbar__buy-button {
   color: white;
   text-align: center;
@@ -116,3 +125,56 @@ body {
     opacity: 0; }
   100% {
     opacity: 1; } }
+.button, .aquarium-popup .aquarium-popup__message-box .aquarium-popup__message-box__close-button {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  outline: 0; }
+  .button:hover:not(:disabled), .aquarium-popup .aquarium-popup__message-box .aquarium-popup__message-box__close-button:hover:not(:disabled) {
+    background-color: white;
+    color: black; }
+  .button:disabled, .aquarium-popup .aquarium-popup__message-box .aquarium-popup__message-box__close-button:disabled {
+    opacity: .5;
+    cursor: not-allowed; }
+
+.button--primary {
+  background-color: cornflowerblue;
+  border: 1px solid cornflowerblue; }
+
+.button--secondary, .aquarium-popup .aquarium-popup__message-box .aquarium-popup__message-box__close-button {
+  background-color: lightskyblue;
+  border: 1px solid lightskyblue; }
+
+.button--error {
+  background-color: red;
+  border: 1px solid red; }
+
+.aquarium-popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(241, 241, 241, 0.5);
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .aquarium-popup .aquarium-popup__message-box {
+    width: 210px;
+    background-color: white;
+    border: 2px solid cornflowerblue;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 0; }
+    .aquarium-popup .aquarium-popup__message-box .aquarium-popup__message-box__close-button {
+      position: absolute;
+      right: -10px;
+      top: -10px;
+      border-radius: 15px;
+      font-size: 12px; }

@@ -45,7 +45,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(244);
+	module.exports = __webpack_require__(246);
 
 
 /***/ },
@@ -61,7 +61,7 @@
 	var ReactDOM = __webpack_require__(43);
 	var react_redux_1 = __webpack_require__(189);
 	var App_1 = __webpack_require__(219);
-	var configureStore_1 = __webpack_require__(233);
+	var configureStore_1 = __webpack_require__(235);
 	var store = configureStore_1.default();
 	ReactDOM.render(React.createElement(react_redux_1.Provider, { store: store },
 	    React.createElement(App_1.default, null)), document.getElementById("app"));
@@ -25202,7 +25202,7 @@
 	var React = __webpack_require__(10);
 	var react_redux_1 = __webpack_require__(189);
 	var aquarium_1 = __webpack_require__(220);
-	var actions_1 = __webpack_require__(232);
+	var actions_1 = __webpack_require__(234);
 	var App = (function (_super) {
 	    __extends(App, _super);
 	    function App() {
@@ -25257,6 +25257,7 @@
 	__webpack_require__(221);
 	var main_1 = __webpack_require__(222);
 	var toolbar_1 = __webpack_require__(230);
+	var popup_1 = __webpack_require__(232);
 	var Aquarium = (function (_super) {
 	    __extends(Aquarium, _super);
 	    function Aquarium() {
@@ -25266,7 +25267,10 @@
 	        var _a = this.props, shopFish = _a.shopFish, tankFish = _a.tankFish, buyButtonActive = _a.buyButtonActive, isTankFishCompatible = _a.isTankFishCompatible, isFetchingCompatibility = _a.isFetchingCompatibility, justBought = _a.justBought, errorMessage = _a.errorMessage, onAddFish = _a.onAddFish, onRemoveFish = _a.onRemoveFish, onFetchCompatibility = _a.onFetchCompatibility, onClearTank = _a.onClearTank, onBuy = _a.onBuy;
 	        return (React.createElement("div", { className: "aquarium" },
 	            React.createElement(main_1.default, { shopFish: shopFish, tankFish: tankFish, onAddFish: onAddFish, onRemoveFish: onRemoveFish, onClearTank: onClearTank }),
-	            React.createElement(toolbar_1.default, { tankFish: tankFish, buyButtonActive: buyButtonActive, isTankFishCompatible: isTankFishCompatible, isFetchingCompatibility: isFetchingCompatibility, justBought: justBought, errorMessage: errorMessage, onFetchCompatibility: onFetchCompatibility, onBuy: onBuy })));
+	            React.createElement(toolbar_1.default, { tankFish: tankFish, buyButtonActive: buyButtonActive, isTankFishCompatible: isTankFishCompatible, isFetchingCompatibility: isFetchingCompatibility, justBought: justBought, errorMessage: errorMessage, onFetchCompatibility: onFetchCompatibility, onBuy: onBuy }),
+	            justBought ?
+	                React.createElement(popup_1.default, { onClose: onClearTank })
+	                : ""));
 	    };
 	    return Aquarium;
 	}(React.Component));
@@ -25308,8 +25312,8 @@
 	        return (React.createElement("div", { className: "aquarium-main" },
 	            React.createElement("h1", { className: "aquarium-main__title" }, "Attest Fish Shop"),
 	            React.createElement("div", { className: "aquarium-main__fish-lists" },
-	                React.createElement(fishList_1.default, { fishList: shopFish, fishOrigin: "shop", onFishSelect: onAddFish }),
-	                React.createElement(fishList_1.default, { fishList: tankFish, fishOrigin: "tank", onFishSelect: onRemoveFish, onClearButtonClick: onClearTank }))));
+	                React.createElement(fishList_1.default, { fishList: shopFish, fishOrigin: "shop", position: "first", onFishSelect: onAddFish }),
+	                React.createElement(fishList_1.default, { fishList: tankFish, fishOrigin: "tank", position: "second", onFishSelect: onRemoveFish, onClearButtonClick: onClearTank }))));
 	    };
 	    return AquariumMain;
 	}(React.Component));
@@ -25342,8 +25346,8 @@
 	        return _super !== null && _super.apply(this, arguments) || this;
 	    }
 	    FishList.prototype.render = function () {
-	        var _a = this.props, fishList = _a.fishList, fishOrigin = _a.fishOrigin, onFishSelect = _a.onFishSelect, onClearButtonClick = _a.onClearButtonClick;
-	        return (React.createElement("div", { className: "fish-list" },
+	        var _a = this.props, fishList = _a.fishList, fishOrigin = _a.fishOrigin, position = _a.position, onFishSelect = _a.onFishSelect, onClearButtonClick = _a.onClearButtonClick;
+	        return (React.createElement("div", { className: "fish-list fish-list--" + position },
 	            React.createElement("h2", null,
 	                "Fish from ",
 	                fishOrigin,
@@ -25383,7 +25387,11 @@
 	        var body = {
 	            fish: tankFish
 	        };
-	        return fetch_1.fetchPostJson(constants_1.COMPATIBILITY_API_URL, body)
+	        var fetchOptions = {
+	            maxTry: 5,
+	            timeout: 4000
+	        };
+	        return fetch_1.fetchPostJson(constants_1.COMPATIBILITY_API_URL, body, fetchOptions)
 	            .then(function (result) { return result["canLiveTogether"]; });
 	    }
 	};
@@ -25409,25 +25417,55 @@
 
 /***/ },
 /* 226 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
-	function fetchPostJson(url, body) {
+	var es6_promise_1 = __webpack_require__(3);
+	function fetchPostJson(url, body, _a) {
+	    var _b = _a === void 0 ? {} : _a, _c = _b.maxTry, maxTry = _c === void 0 ? 1 : _c, _d = _b.timeout, timeout = _d === void 0 ? 4000 : _d;
 	    var options = {
 	        method: "POST",
 	        headers: { "Content-Type": "application/json" },
 	        body: JSON.stringify(body)
 	    };
+	    var nbTry = 0;
+	    function tryFetch() {
+	        return actualFetch(url, options)
+	            .catch(function (err) {
+	            nbTry++;
+	            if (nbTry == maxTry) {
+	                throw err;
+	            }
+	            return tryFetch();
+	        });
+	    }
+	    return handleTimeout(tryFetch(), timeout);
+	}
+	exports.fetchPostJson = fetchPostJson;
+	function actualFetch(url, options) {
 	    return fetch(url, options)
 	        .then(function (response) {
 	        if (!response.ok) {
-	            return response.json().then(function (err) { return Promise.reject(err); });
+	            return response.json().then(function (err) { return es6_promise_1.Promise.reject(err); });
 	        }
 	        return response.json();
 	    });
 	}
-	exports.fetchPostJson = fetchPostJson;
+	exports.actualFetch = actualFetch;
+	function handleTimeout(promise, timeout) {
+	    return new es6_promise_1.Promise(function (resolve, reject) {
+	        var timeoutFn = setTimeout(function () {
+	            reject(new Error("API Timeout"));
+	        }, timeout);
+	        promise
+	            .then(function (result) {
+	            clearTimeout(timeoutFn);
+	            resolve(result);
+	        })
+	            .catch(function (err) { return reject(err); });
+	    });
+	}
 
 
 /***/ },
@@ -25510,6 +25548,49 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
+	var __extends = (this && this.__extends) || (function () {
+	    var extendStatics = Object.setPrototypeOf ||
+	        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+	        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+	    return function (d, b) {
+	        extendStatics(d, b);
+	        function __() { this.constructor = d; }
+	        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	    };
+	})();
+	Object.defineProperty(exports, "__esModule", { value: true });
+	var React = __webpack_require__(10);
+	__webpack_require__(233);
+	var AquariumPopup = (function (_super) {
+	    __extends(AquariumPopup, _super);
+	    function AquariumPopup() {
+	        return _super !== null && _super.apply(this, arguments) || this;
+	    }
+	    AquariumPopup.prototype.render = function () {
+	        var onClose = this.props.onClose;
+	        return (React.createElement("div", { className: "aquarium-popup" },
+	            React.createElement("p", { className: "aquarium-popup__message-box" },
+	                "Congratulations, you bought some really nice fish !",
+	                React.createElement("img", { src: "https://s-media-cache-ak0.pinimg.com/564x/b3/01/7a/b3017a540f5a142867d51c0c689f8c4e.jpg", width: "100" }),
+	                React.createElement("button", { className: "aquarium-popup__message-box__close-button", onClick: onClose }, "X"))));
+	    };
+	    return AquariumPopup;
+	}(React.Component));
+	exports.default = AquariumPopup;
+	;
+
+
+/***/ },
+/* 233 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 234 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
 	var Types = __webpack_require__(225);
 	var fishService_1 = __webpack_require__(224);
@@ -25541,10 +25622,20 @@
 	        dispatch({
 	            type: Types.FISH_COMPATIBILITY_REQUESTED
 	        });
+	        var stateBefore = getState();
 	        var tankFish = getState().get("tankFish").toArray();
 	        return fishService_1.default.getCompatibility(tankFish)
-	            .then(function (compatible) { return dispatch(fishCompatibilitySuccess(compatible)); })
-	            .catch(function (err) { return dispatch(fishCompatibilityFailure(err)); });
+	            .then(function (compatible) {
+	            // Update the state only if still relevant (asynchronous operations)
+	            if (stateBefore == getState()) {
+	                dispatch(fishCompatibilitySuccess(compatible));
+	            }
+	        })
+	            .catch(function (err) {
+	            if (stateBefore == getState()) {
+	                dispatch(fishCompatibilityFailure(err));
+	            }
+	        });
 	    };
 	}
 	exports.fetchCompatibility = fetchCompatibility;
@@ -25577,15 +25668,15 @@
 
 
 /***/ },
-/* 233 */
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
 	var redux_1 = __webpack_require__(196);
-	var redux_thunk_1 = __webpack_require__(234);
-	var redux_logger_1 = __webpack_require__(235);
-	var reducer_1 = __webpack_require__(241);
+	var redux_thunk_1 = __webpack_require__(236);
+	var redux_logger_1 = __webpack_require__(237);
+	var reducer_1 = __webpack_require__(243);
 	function configureStore() {
 	    var loggerMiddleware = redux_logger_1.createLogger({
 	        stateTransformer: function (state) { return state.toJS(); }
@@ -25598,7 +25689,7 @@
 
 
 /***/ },
-/* 234 */
+/* 236 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25626,7 +25717,7 @@
 	exports['default'] = thunk;
 
 /***/ },
-/* 235 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25638,11 +25729,11 @@
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _core = __webpack_require__(236);
+	var _core = __webpack_require__(238);
 
-	var _helpers = __webpack_require__(237);
+	var _helpers = __webpack_require__(239);
 
-	var _defaults = __webpack_require__(240);
+	var _defaults = __webpack_require__(242);
 
 	var _defaults2 = _interopRequireDefault(_defaults);
 
@@ -25770,7 +25861,7 @@
 	exports.default = defaultLogger;
 
 /***/ },
-/* 236 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25783,9 +25874,9 @@
 
 	exports.printBuffer = printBuffer;
 
-	var _helpers = __webpack_require__(237);
+	var _helpers = __webpack_require__(239);
 
-	var _diff = __webpack_require__(238);
+	var _diff = __webpack_require__(240);
 
 	var _diff2 = _interopRequireDefault(_diff);
 
@@ -25918,7 +26009,7 @@
 	}
 
 /***/ },
-/* 237 */
+/* 239 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -25942,7 +26033,7 @@
 	var timer = exports.timer = typeof performance !== "undefined" && performance !== null && typeof performance.now === "function" ? performance : Date;
 
 /***/ },
-/* 238 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25952,7 +26043,7 @@
 	});
 	exports.default = diffLogger;
 
-	var _deepDiff = __webpack_require__(239);
+	var _deepDiff = __webpack_require__(241);
 
 	var _deepDiff2 = _interopRequireDefault(_deepDiff);
 
@@ -26041,7 +26132,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 239 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global) {/*!
@@ -26470,7 +26561,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 240 */
+/* 242 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -26521,14 +26612,14 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 241 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
-	var Immutable = __webpack_require__(242);
+	var Immutable = __webpack_require__(244);
 	var Constants = __webpack_require__(225);
-	var fishList = __webpack_require__(243); // json is an asset, not a ts module, so we use require for this one
+	var fishList = __webpack_require__(245); // json is an asset, not a ts module, so we use require for this one
 	// This is the default state, given by the exercise
 	exports.initialState = {
 	    shopFish: fishList,
@@ -26549,14 +26640,12 @@
 	        case Constants.ADD_FISH:
 	            return state
 	                .update("shopFish", function (shopFish) { return shopFish.delete(shopFish.indexOf(action.fish)); })
-	                .update("tankFish", function (tankFish) { return tankFish.push(action.fish); })
-	                .set("justBought", false);
+	                .update("tankFish", function (tankFish) { return tankFish.push(action.fish); });
 	        case Constants.REMOVE_FISH:
 	            return state
 	                .update("tankFish", function (tankFish) { return tankFish.delete(tankFish.indexOf(action.fish)); })
 	                .update("shopFish", function (shopFish) { return shopFish.push(action.fish); })
-	                .update("shopFish", function (shopFish) { return shopFish.sort(); })
-	                .set("justBought", false);
+	                .update("shopFish", function (shopFish) { return shopFish.sort(); });
 	        case Constants.FISH_COMPATIBILITY_REQUESTED:
 	            return state
 	                .set("buyButtonActive", false)
@@ -26581,15 +26670,14 @@
 	        case Constants.CLEAR_TANK:
 	            return Immutable.fromJS(exports.initialState);
 	        case Constants.BUY:
-	            return state
-	                .set("justBought", true);
+	            return state.set("justBought", true);
 	    }
 	}
 	exports.default = aquariumApp;
 
 
 /***/ },
-/* 242 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -31573,7 +31661,7 @@
 	}));
 
 /***/ },
-/* 243 */
+/* 245 */
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -31620,7 +31708,7 @@
 	];
 
 /***/ },
-/* 244 */
+/* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "index.html";
