@@ -6,7 +6,10 @@ tags:
 I recently started using Obsidian to organise my notes. I've been particularly impressed by its local-first philosophy and its focus on connections between notes rather than a traditional folder hierarchy.
 
 One thing I wanted was a simple way to publish selected notes as a website directly from Obsidian, without maintaining two copies of the same content.
+
 This blog is the result: **I write in Obsidian, run a single command, and the website is updated** while preserving the links and graph structure between notes.
+## Obisidian -> `make publish` -> Website
+![[_attachements/Pasted image 20260728163442.png]]
 
 The source for this website, including all of its content, is available on GitHub: https://github.com/epayet/epayet.github.io
 # How it works
