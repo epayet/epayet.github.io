@@ -2,7 +2,7 @@
 title: Hey
 ---
 
-Hi. :)
+Hi.
 
 <details>
 <summary>Ninja no jutsu</summary>
