@@ -53,3 +53,9 @@
         display: block !important;
     }
 }
+
+
+// use the same color as longer code, rather than yellowy weird thing
+html[saved-theme="light"] body code {
+  background-color: #E0E2E5;
+}
