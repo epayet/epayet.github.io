@@ -7,7 +7,7 @@ configuration:
   # analytics:
     # provider: plausible
   locale: en-US
-  baseUrl: emmanuel-payet.me/public-quartz
+  baseUrl: emmanuel-payet.me
   # baseUrl: localhost:8080
   ignorePatterns:
     - private
@@ -158,7 +158,7 @@ plugins:
       position: right
       priority: 10
   - source: "@quartz-community/search"
-    enabled: true
+    enabled: false
     layout:
       position: left
       priority: 20
