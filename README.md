@@ -1,17 +1,10 @@
-# Quartz v5
+# Mani's blog
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+I made a pipeline that transforms Obsidian (markdown) files from a specific folder to a website, keeping the links and relations from the original files in 1 command.
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+# How to run
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+You need to set `CONTENT_SRC` in the Makefile to define where your markdown files are.
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
-
-## Sponsors
-
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+- `make serve`: run the server locally
+- `make publish`: commit to git and push to publish the website

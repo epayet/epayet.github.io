@@ -264,7 +264,7 @@ plugins:
       includeAll: false
       includedProperties:
         - description
-        - tags
+        # - tags
         - aliases
       excludedProperties: []
       hidePropertiesView: false
