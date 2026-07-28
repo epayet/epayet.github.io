@@ -1,4 +1,5 @@
 # Define the source directory where your Obsidian notes live
+# This could be an env var instead
 CONTENT_SRC := /home/manu/Dropbox/Obsidian/Public/Quartz/
 
 # The local content directory inside the Git repository
@@ -16,10 +17,10 @@ copy:
 	@echo "Clearing old content directory..."
 	rm -rf $(CONTENT_DEST)
 	mkdir -p $(CONTENT_DEST)
-	@echo "Copying fresh notes from Dropbox..."
+	@echo "Copying fresh notes from Obsidian..."
 	cp -r $(CONTENT_SRC)* $(CONTENT_DEST)
 
-sync:
+publish:
 	make copy
 	npx quartz sync
 
