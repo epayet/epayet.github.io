@@ -4,7 +4,7 @@ import type {
   QuartzComponentConstructor,
 } from "@quartz-community/types";
 import { classNames } from "../util/lang";
-import style from "./styles/example.scss";
+import style from "./styles/kit-newsletter.scss";
 // @ts-expect-error - inline script import handled by Quartz bundler
 import script from "./scripts/example.inline.ts";
 
@@ -22,11 +22,16 @@ export default ((opts?: KitNewsletterOptions) => {
     const title = frontmatter?.title ?? "Untitled";
     const fullText = `${prefix}${title}${suffix}`;
 
-    return <div class={classNames(className)}>{fullText}</div>;
+    return (
+      <div className="kit-newsletter">
+        <h2>If you like what I write, you can subscribe:</h2>
+        <script async data-uid="f090234a6e" src="https://mani-blog.kit.com/f090234a6e/index.js"></script>
+      </div>
+    )
   };
 
   Component.css = style;
-  Component.afterDOMLoaded = script;
+  // Component.afterDOMLoaded = script;
 
   return Component;
 }) satisfies QuartzComponentConstructor;

@@ -1,10 +1,17 @@
 Following https://quartz.jzhao.xyz/advanced/making-plugins, 
 I'm trying to embed a simple html section in my blog.
-After messing with layouts and the loadQuartzLayout function, I resolved to create a plugin that exports a Component for me to use.
+After messing with layouts and the loadQuartzLayout function to attempt keeping it simple and embedded in the main website as a component, I resolved to create a plugin that exports a Component for me to use.
 
 I could make that one separate and its own thing for other people to use, maybe later. 
 For now it's embedded in the website code.
 
+Every time you change the component, you have to build it (`npm run build`).
+Probably need to do a fresh `npx quartz build` as well.
+
+There are lots of things I don't need, but at least I got something working.
+Could be more customisable as well.
+
+---
 ---
 Original readme:
 

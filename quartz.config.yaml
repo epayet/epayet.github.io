@@ -276,10 +276,10 @@ plugins:
       priority: 15
       display: all
   - source: "./quartz/plugins/kit-newsletter"
-    enabled: false
+    enabled: true
     layout:
       position: footer
-      priority: 20
+      priority: 10
 layout:
   groups:
     toolbar:
