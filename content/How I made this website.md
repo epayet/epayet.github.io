@@ -39,7 +39,7 @@ I ended up [writing this `Makefile`](https://github.com/epayet/epayet.github.io/
 
 ```bash
 # Define the source directory where your Obsidian notes live
-CONTENT_SRC := //Obsidian/Public/Quartz/
+CONTENT_SRC := /Obsidian/Public/Quartz/
 
 # The local content directory inside the Git repository
 CONTENT_DEST := content
