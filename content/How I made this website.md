@@ -71,6 +71,24 @@ Quartz has quite a few community themes available. I chose Kanagawa because I li
 - Community themes: https://github.com/saberzero1/quartz-themes
 - Kanagawa: https://quartz-themes.github.io/kanagawa/
 - Personal tweaks: https://github.com/epayet/epayet.github.io/blob/8d94f5e177e0007aa4874580766bcc6242bf698c/quartz/styles/custom.scss
+# Benefits of using Quartz
+Quartz comes with a bunch of useful plugins.
+## og-image
+`"@quartz-community/og-image"` turns the metadata of the page into a generated image that gets used by bots.
+
+I found this website which shows you how the metadata of the website will get displayed in a few different scenarios (google, whatsapp, etc.): https://www.opengraph.to/u/emmanuel-payet.me
+
+For example, with this frontmatter metadata in my markdown file:
+```yaml
+---
+title: How I made this website
+description: I explain how I turned a folder in my Obsidian vault into a website with a simple command, while preserving the links and graph structure.
+tags: 
+  - engineering
+---
+```
+
+This is the og-image for this page: ![og-image](https://emmanuel-payet.me/how-i-made-this-website-og-image.webp)
 # Inspiration
 Steph Ango, the CEO of Obsidian, uses a similar setup for his personal website: https://stephango.com/about
 
