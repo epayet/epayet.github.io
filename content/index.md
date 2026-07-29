@@ -20,7 +20,7 @@ I like and think a lot about:
 # Engineering
 My first interesting post is about how I made this website, aka my Obsidian folder to website pipeline: 
 
-[[How I made this website|How I made this website]]
+[[Obsidian to website pipeline|Obsidian to website pipeline]]
 
 Wow, I've made a second post, split from the first one:
 

@@ -1,8 +1,10 @@
 ---
-title: How I made this website
+title: Obsidian to website pipeline
+alias: How I made this website
 description: I explain how I turned a folder in my Obsidian vault into a website with a simple command, while preserving the links and graph structure.
 tags: 
   - engineering
+  - obsidian
 ---
 I recently started using Obsidian to organise my notes. I've been particularly impressed by its local-first philosophy and its focus on connections between notes rather than a traditional folder hierarchy.
 
