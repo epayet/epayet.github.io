@@ -6,7 +6,7 @@ tags:
   - obsidian
 ---
 
-On my first post on [[Obsidian to website pipeline|Obsidian to website pipeline]], I wrote about how I set up my Obsidian -> website pipeline. I thought I'd make a separate one about how cool Quartz is and how I configured it.
+On my first post on [[How I made this website|How I made this website]], I wrote about how I set up my Obsidian -> website pipeline. I thought I'd make a separate one about how cool Quartz is and how I configured it.
 # Theme
 Quartz has quite a few community themes available. I chose Kanagawa because I like its colours, then customised it to better match the look I wanted.
 
@@ -31,7 +31,7 @@ tags:
 ---
 ```
 
-This is the og-image for the page [[Obsidian to website pipeline|Obsidian to website pipeline]]: ![og-image](https://emmanuel-payet.me/how-i-made-this-website-og-image.webp)
+This is the og-image for the page [[How I made this website|How I made this website]]: ![og-image](https://emmanuel-payet.me/how-i-made-this-website-og-image.webp)
 ## frontmatter
 Speaking of frontmatter, this is all the supported fields: https://quartz.jzhao.xyz/plugins/frontmatter
 ## content-index

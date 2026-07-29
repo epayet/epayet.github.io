@@ -1,6 +1,5 @@
 ---
-title: Obsidian to website pipeline
-alias: How I made this website
+title: How I made this website
 description: I explain how I turned a folder in my Obsidian vault into a website with a simple command, while preserving the links and graph structure.
 tags: 
   - engineering
