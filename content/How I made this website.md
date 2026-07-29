@@ -89,6 +89,8 @@ tags:
 ```
 
 This is the og-image for this page: ![og-image](https://emmanuel-payet.me/how-i-made-this-website-og-image.webp)
+## frontmatter
+Speaking of frontmatter, this is all the supported fields: https://quartz.jzhao.xyz/plugins/frontmatter
 # Inspiration
 Steph Ango, the CEO of Obsidian, uses a similar setup for his personal website: https://stephango.com/about
 
