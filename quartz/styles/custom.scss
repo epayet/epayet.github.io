@@ -54,6 +54,22 @@
     }
 }
 
+// I want an image in my title
+.page-title {
+  display: flex;
+  //align-items: center;
+  //gap: 0.5rem;
+
+  &::after {
+    content: "";
+    margin-left: 10px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("https://avatars.githubusercontent.com/u/3276179?v=4") no-repeat center / contain;
+  }
+}
+
 
 // use the same color as longer code, rather than yellowy weird thing
 html[saved-theme="light"] body code {
