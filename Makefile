@@ -22,6 +22,9 @@ copy:
 
 publish:
 	make copy
+	# replace absolute paths links from my Obsidian with relative links
+	# this is quite specific to my vault
+	find ./content -type f -exec sed -i 's/\[\[Public\/Quartz\//\[\[/g' {} +
 	npx quartz sync
 
 build:

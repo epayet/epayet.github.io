@@ -19,7 +19,7 @@ I may or may not write about the topics above.
 ---
 
 # Engineering
-My first interesting post is about how I made this website, aka my Obsidian folder to website pipeline: [[Public/Quartz/How I made this website|How I made this website]]
+My first interesting post is about how I made this website, aka my Obsidian folder to website pipeline: [[How I made this website|How I made this website]]
 
 ---
 
