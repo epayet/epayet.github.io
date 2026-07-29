@@ -1,5 +1,5 @@
 ---
-title: Welcome
+title: Mani's blog
 ---
 
 Hi. My name is Emmanuel Payet (otherwise known as Mani or Manu) and I am a software engineer.
