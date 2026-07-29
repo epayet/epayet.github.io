@@ -275,6 +275,11 @@ plugins:
       position: beforeBody
       priority: 15
       display: all
+  - source: "./quartz/plugins/kit-newsletter"
+    enabled: false
+    layout:
+      position: footer
+      priority: 20
 layout:
   groups:
     toolbar:

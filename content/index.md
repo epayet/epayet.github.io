@@ -22,6 +22,10 @@ My first interesting post is about how I made this website, aka my Obsidian fold
 
 [[How I made this website|How I made this website]]
 
+Wow, I've made a second post, split from the first one:
+
+[[Benefits of using Quartz|Benefits of using Quartz]]
+
 ---
 
 <details>

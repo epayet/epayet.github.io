@@ -65,32 +65,6 @@ serve:
 Locally: `make serve`. It has hot reload and everything, which is nice.
 
 Publishing: I write my notes in Obsidian and run `make publish`. The Makefile copies the public notes into Quartz's `content` directory before running `quartz sync`, which commits, pushes, and triggers deployment through GitHub Pages (using GitHub Actions).
-## Theme
-Quartz has quite a few community themes available. I chose Kanagawa because I like its colours, then customised it to better match the look I wanted..
-
-- Community themes: https://github.com/saberzero1/quartz-themes
-- Kanagawa: https://quartz-themes.github.io/kanagawa/
-- Personal tweaks: https://github.com/epayet/epayet.github.io/blob/8d94f5e177e0007aa4874580766bcc6242bf698c/quartz/styles/custom.scss
-# Benefits of using Quartz
-Quartz comes with a bunch of useful plugins.
-## og-image
-`"@quartz-community/og-image"` turns the metadata of the page into a generated image that gets used by bots.
-
-I found this website which shows you how the metadata of the website will get displayed in a few different scenarios (google, whatsapp, etc.): https://www.opengraph.to/u/emmanuel-payet.me
-
-For example, with this frontmatter metadata in my markdown file:
-```yaml
----
-title: How I made this website
-description: I explain how I turned a folder in my Obsidian vault into a website with a simple command, while preserving the links and graph structure.
-tags: 
-  - engineering
----
-```
-
-This is the og-image for this page: ![og-image](https://emmanuel-payet.me/how-i-made-this-website-og-image.webp)
-## frontmatter
-Speaking of frontmatter, this is all the supported fields: https://quartz.jzhao.xyz/plugins/frontmatter
 # Inspiration
 Steph Ango, the CEO of Obsidian, uses a similar setup for his personal website: https://stephango.com/about
 
@@ -99,3 +73,7 @@ See the Quartz showcase with more examples: https://quartz.jzhao.xyz/showcase
 There are still plenty of Quartz features I haven't enabled yet—search, analytics, comments, and more—but those can wait. 
 
 The important part is that I now have a publishing workflow I'm happy with, and this is the first post created with it.
+
+I have now made my second post as I've decided to split and write more about Quartz itself: 
+
+[[Benefits of using Quartz|Benefits of using Quartz]]
