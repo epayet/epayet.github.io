@@ -9,7 +9,9 @@ I recently started using Obsidian to organise my notes. I've been particularly i
 
 One thing I wanted was a simple way to publish selected notes as a website directly from Obsidian, without maintaining two copies of the same content.
 
-This blog is the result: **I write in Obsidian, run a single command, and the website is updated** while preserving the links and graph structure between notes.
+This is how I made this blog: **I write in Obsidian, run a single command, and the website is updated** while preserving the links and graph structure between notes.
+
+I have a dedicated `Public/Quartz` folder which contains what's on the website. I can link my other private notes to my public notes and leverage my other Obsidian plugins (SmartConnection, etc.).
 ## Obisidian -> `make publish` -> Website
 ![[_attachements/Pasted image 20260728163442.png]]
 
@@ -36,6 +38,8 @@ Both `quartz build`  and `quartz sync` have the option to use a separate content
 `quartz build` works perfectly with this setup, but `quartz sync` expects the content to live inside the Git repository. It does a bit of Git shenanigans behind the scenes that don't work when the content lives elsewhere.
 
 After considering mounts and Git submodules, I decided not to over-engineer it. For now, publishing simply copies my notes into Quartz's `content` directory before running `quartz sync`. It's simple, reliable, and good enough for my workflow.
+
+Note: you'll see on github I do some extra absolute path fixes at the same time to keep the links working.
 
 I ended up [writing this `Makefile`](https://github.com/epayet/epayet.github.io/blob/86cccce18a05d4d8a8f159962f3e94ab761a7c38/Makefile). Here are the most relevant sections:
 
