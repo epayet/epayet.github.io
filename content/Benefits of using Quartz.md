@@ -6,7 +6,7 @@ tags:
   - obsidian
 ---
 
-On my first post on [[How I made this website|How I made this website]], I wrote about how I set up my Obsidian -> website pipeline. I thought I'd make a separate one about how cool Quartz is and how I configured it.
+On my first post on [[How I made this website|How I made this website]], I wrote about how I set up my Obsidian -> website pipeline. I thought I'd make a separate one about how cool [Quartz](https://quartz.jzhao.xyz/) is and how I configured it.
 # Theme
 Quartz has quite a few community themes available. I chose Kanagawa because I like its colours, then customised it to better match the look I wanted.
 
@@ -31,7 +31,10 @@ tags:
 ---
 ```
 
-This is the og-image for the page [[How I made this website|How I made this website]]: ![og-image](https://emmanuel-payet.me/how-i-made-this-website-og-image.webp)
+This is the og-image for the page [[How I made this website|How I made this website]]:
+
+https://emmanuel-payet.me/how-i-made-this-website-og-image.webp:
+![og-image](https://emmanuel-payet.me/how-i-made-this-website-og-image.webp)
 ## frontmatter
 Speaking of frontmatter, this is all the supported fields: https://quartz.jzhao.xyz/plugins/frontmatter
 ## content-index
@@ -41,7 +44,11 @@ For my website:
 - https://emmanuel-payet.me/sitemap.xml
 - https://emmanuel-payet.me/index.xml
 ## tags and tag page
-https://emmanuel-payet.me/tags/
+`tag-list` to display tags at the top of the page: https://quartz.jzhao.xyz/plugins/taglist
+
+They link to the tag pages thanks to the `tag-page` plugin (https://quartz.jzhao.xyz/plugins/tagpage). 
+
+Here's my tags page: https://emmanuel-payet.me/tags/
 ## comments
 This was fairly easy to setup using giscus: https://quartz.jzhao.xyz/features/comments.
 It's enabled right now, see at the bottom of this page
