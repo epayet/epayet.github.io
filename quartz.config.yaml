@@ -4,8 +4,10 @@ configuration:
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
-  # analytics:
-    # provider: plausible
+  analytics:
+    provider: umami
+    host: https://cloud.umami.is
+    websiteId: a3b0382c-7bd5-4395-9e82-9683bac6b058
   locale: en-US
   baseUrl: emmanuel-payet.me
   # baseUrl: localhost:8080
