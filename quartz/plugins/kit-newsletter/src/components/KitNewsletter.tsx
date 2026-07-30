@@ -6,7 +6,9 @@ import type {
 import { classNames } from "../util/lang";
 import style from "./styles/kit-newsletter.scss";
 // @ts-expect-error - inline script import handled by Quartz bundler
-import script from "./scripts/example.inline.ts";
+// import script from "./scripts/example.inline.ts";
+import script from "./scripts/kit-newsletter.inline.ts";
+
 
 export interface KitNewsletterOptions {
   prefix?: string;
@@ -24,7 +26,7 @@ export default ((opts?: KitNewsletterOptions) => {
 
     return (
       <div className="kit-newsletter">
-        <hr/>
+        <hr className="kit-newsletter-hr"/>
         <h2>If you like what I write, you can subscribe:</h2>
         <script async data-uid="f090234a6e" src="https://mani-blog.kit.com/f090234a6e/index.js"></script>
       </div>
@@ -32,7 +34,7 @@ export default ((opts?: KitNewsletterOptions) => {
   };
 
   Component.css = style;
-  // Component.afterDOMLoaded = script;
+  Component.afterDOMLoaded = script;
 
   return Component;
 }) satisfies QuartzComponentConstructor;
