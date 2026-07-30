@@ -42,3 +42,11 @@ For my website:
 - https://emmanuel-payet.me/index.xml
 ## tags and tag page
 https://emmanuel-payet.me/tags/
+## comments
+This was fairly easy to setup using giscus: https://quartz.jzhao.xyz/features/comments.
+It's enabled right now, see at the bottom of this page
+## create custom component plugin
+I wanted to have a [Kit](https://kit.com/) email subscribe form at the end of every page. This was not as easy as it seems (I just wanted a simple script tag at the end of each page...). 
+I ended up making a custom plugin following this guide: https://quartz.jzhao.xyz/advanced/creating-components. 
+
+I got it to work and might make an official plugin for it later? Current quick and dirty implementation: https://github.com/epayet/epayet.github.io/tree/v5/quartz/plugins/kit-newsletter
