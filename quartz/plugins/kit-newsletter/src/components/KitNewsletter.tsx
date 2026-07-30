@@ -24,6 +24,7 @@ export default ((opts?: KitNewsletterOptions) => {
 
     return (
       <div className="kit-newsletter">
+        <hr/>
         <h2>If you like what I write, you can subscribe:</h2>
         <script async data-uid="f090234a6e" src="https://mani-blog.kit.com/f090234a6e/index.js"></script>
       </div>

@@ -3760,6 +3760,7 @@ var KitNewsletter_default = ((opts) => {
     const frontmatter = props.fileData?.frontmatter;
     frontmatter?.title ?? "Untitled";
     return /* @__PURE__ */ u2("div", { className: "kit-newsletter", children: [
+      /* @__PURE__ */ u2("hr", {}),
       /* @__PURE__ */ u2("h2", { children: "If you like what I write, you can subscribe:" }),
       /* @__PURE__ */ u2("script", { async: true, "data-uid": "f090234a6e", src: "https://mani-blog.kit.com/f090234a6e/index.js" })
     ] });

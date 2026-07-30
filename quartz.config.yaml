@@ -218,14 +218,14 @@ plugins:
       priority: 5
       condition: not-index
   - source: "@quartz-community/comments"
-    enabled: false
+    enabled: true
     options:
       provider: giscus
       options:
-        repo: TODO:username/repo-name
-        repoId: TODO:your-repo-id
+        repo: epayet/epayet.github.io
+        repoId: MDEwOlJlcG9zaXRvcnkyNjgxMDA1NA==
         category: Announcements
-        categoryId: TODO:your-category-id
+        categoryId: DIC_kwDOAZkWxs4DCUJ6
         mapping: url
         strict: true
         reactionsEnabled: true
