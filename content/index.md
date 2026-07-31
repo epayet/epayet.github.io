@@ -27,6 +27,12 @@ Wow, I've made a second post, split from the first one:
 
 [[Benefits of using Quartz|Benefits of using Quartz]]
 
+# All posts by tags
+
+https://emmanuel-payet.me/tags
+# RSS feed
+https://emmanuel-payet.me/index.xml
+
 ---
 
 <details>
