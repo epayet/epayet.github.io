@@ -1,65 +1,90 @@
 @use "./variables.scss" as *;
 // put your custom CSS here!
-
 // Kanagawa tweaks — using !important since the theme plugin's own
 // variables are also declared !important, so this guarantees we win.
-
 // Note: code-block coloring/background is no longer handled here — Shiki
 // is now set to the kanagawa-lotus/kanagawa-dragon themes directly in
 // quartz.config.yaml, with keepBackground: true, so it owns its own
 // backgrounds and syntax colors natively. No CSS override needed for that.
-
 // --- Dark mode ---
 :root[saved-theme="dark"] {
   --text-title-h2: var(--crystalBlue) !important;   // was --neutral-orange (#d65d0e); cool blue instead
+  --text-title-h3: var(--autumnGreen) !important;    // was --neutral-yellow (#d79921, too bright), then --lotusYellow (#77713f, too dark on dark bg); this is greener + lighter, reads well
   --code-string: var(--springGreen) !important;     // #98BB6C, muted Kanagawa green
-
-
   // fix kanagawa sticky header, keep the same background
   @media all and (max-width: 800px) {
     .page > div#quartz-body div.sidebar.left {
       background-color: var(--background-primary);
     }
   }
-
-
   figure[data-rehype-pretty-code-figure] pre {
     background-color: var(--sumiInk3) !important; // #363646 — force visible bg over whatever's blocking it
   }
+  // was: transparent background, thin green border-left (--secondary → autumnGreen)
+  blockquote {
+    background-color: rgba(126, 156, 216, 0.08) !important; // crystalBlue tint, very subtle
+    border-left: 4px solid var(--crystalBlue) !important;   // was 3px var(--secondary) (green)
+    border-inline-start: 4px solid var(--crystalBlue) !important;
+    padding: 0.6rem 1rem !important;
+    border-radius: 0 6px 6px 0;
+    position: relative;
+  }
+  blockquote::before {
+    content: "\201C"; // opening curly quote
+    font-size: 2.5rem;
+    line-height: 0;
+    position: absolute;
+    top: 0.9rem;
+    left: 0.3rem;
+    color: var(--crystalBlue);
+    opacity: 0.35;
+  }
 }
-
 // --- Light mode ---
 :root[saved-theme="light"] {
   --paper-like: #ECEDEF !important;                 // was #F2EFE9 (warm cream); cooler, less orange cast
   --text-title-h2: var(--lotusBlue4) !important;    // was --lotusOrange (#cc6d00); matching blue for h2
   --code-string: var(--lotusGreen) !important;      // #6f894e, muted Kanagawa green
-
   // fix kanagawa sticky header, keep the same background
   @media all and (max-width: 800px) {
     .page > div#quartz-body div.sidebar.left {
       background-color: var(--paper-like);
     }
   }
-
-
   figure[data-rehype-pretty-code-figure] pre {
     background-color: #E0E2E5 !important; // force visible bg over whatever's blocking it
   }
+  // was: transparent background, thin green border-left (--secondary → lotusGreen)
+  blockquote {
+    background-color: rgba(77, 105, 155, 0.06) !important; // lotusBlue4 tint, very subtle
+    border-left: 4px solid var(--lotusBlue4) !important;    // was 3px var(--secondary) (green)
+    border-inline-start: 4px solid var(--lotusBlue4) !important;
+    padding: 0.6rem 1rem !important;
+    border-radius: 0 6px 6px 0;
+    position: relative;
+  }
+  blockquote::before {
+    content: "\201C"; // opening curly quote
+    font-size: 2.5rem;
+    line-height: 0;
+    position: absolute;
+    top: 0.9rem;
+    left: 0.3rem;
+    color: var(--lotusBlue4);
+    opacity: 0.35;
+  }
 }
-
 // Override theme default to display the title. Why you no title kanagawa?
 @media (max-width: 800px) {
     .page-title {
         display: block !important;
     }
 }
-
 // I want an image in my title
 .page-title {
   display: flex;
   //align-items: center;
   //gap: 0.5rem;
-
   &::after {
     content: "";
     margin-left: 10px;
@@ -69,9 +94,11 @@
     background: url("./static/icon.png") no-repeat center / contain;
   }
 }
-
-
 // use the same color as longer code, rather than yellowy weird thing
 html[saved-theme="light"] body code {
   background-color: #E0E2E5;
+}
+// the theme is setting it to "grab" for some reason
+strong {
+  cursor: auto;
 }
