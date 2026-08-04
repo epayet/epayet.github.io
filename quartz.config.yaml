@@ -242,6 +242,7 @@ plugins:
       links:
         GitHub: https://github.com/epayet
         Linkedin: https://uk.linkedin.com/in/emmanuelpayet/en
+        RSS Feed: https://emmanuel-payet.me/index.xml
     layout:
       position: footer
       priority: 50
