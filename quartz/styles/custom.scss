@@ -20,6 +20,16 @@
   figure[data-rehype-pretty-code-figure] pre {
     background-color: var(--sumiInk3) !important; // #363646 — force visible bg over whatever's blocking it
   }
+  // languageless ```blocks``` skip Shiki entirely (no figure wrapper, no
+  // data-language) and fall back to the theme's own pre background — match
+  // it to the figure pre above so it's not stuck on the old yellow/tan
+  pre:not(figure[data-rehype-pretty-code-figure] pre) {
+    background-color: var(--sumiInk3) !important;
+
+    code {
+      color: var(--fujiWhite) !important; // was --code-normal (--fujiGray, #727169) — too low-contrast on this bg
+    }
+  }
   // was: transparent background, thin green border-left (--secondary → autumnGreen)
   blockquote {
     background-color: rgba(126, 156, 216, 0.08) !important; // crystalBlue tint, very subtle
@@ -53,6 +63,16 @@
   }
   figure[data-rehype-pretty-code-figure] pre {
     background-color: #E0E2E5 !important; // force visible bg over whatever's blocking it
+  }
+  // languageless ```blocks``` skip Shiki entirely (no figure wrapper, no
+  // data-language) and fall back to the theme's own pre background — match
+  // it to the figure pre above so it's not stuck on the old yellow/tan
+  pre:not(figure[data-rehype-pretty-code-figure] pre) {
+    background-color: #E0E2E5 !important;
+
+    code {
+      color: var(--lotusInk1) !important; // was --code-normal (--lotusGray3, #8a8980) — too low-contrast on this bg
+    }
   }
   // was: transparent background, thin green border-left (--secondary → lotusGreen)
   blockquote {
@@ -94,12 +114,10 @@
     background: url("./static/icon.png") no-repeat center / contain;
   }
 }
-
 // use the same color as longer code, rather than yellowy weird thing
 html[saved-theme="light"] body code {
   background-color: #E0E2E5;
 }
-
 // the theme is setting it to "grab" for some reason
 strong {
   cursor: auto;
@@ -110,14 +128,14 @@ strong {
 figure:not([data-rehype-pretty-code-figure]) {
   margin: 1.5rem auto;
   text-align: center;
- 
+
   img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
     border-radius: 6px;
   }
- 
+
   figcaption {
     margin-top: 0.5rem;
     font-size: 0.85rem;
@@ -126,7 +144,7 @@ figure:not([data-rehype-pretty-code-figure]) {
     text-align: center !important; // something else was overriding the inherited center
   }
 }
- 
+
 // Plain images with no caption, no <figure> wrapper — just center them too
 .center article img:not(figure img) {
   display: block;
