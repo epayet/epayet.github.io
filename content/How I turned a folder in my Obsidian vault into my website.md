@@ -1,17 +1,20 @@
 ---
-title: How I made this website
+title: How I turned a folder in my Obsidian vault into my website
 description: I explain how I turned a folder in my Obsidian vault into a website with a simple command, while preserving the links and graph structure.
-tags: 
+tags:
   - engineering
   - obsidian
+date_created: 2026-07-28T14:48
+date_updated: 2026-08-06T15:33
 ---
 I recently started using Obsidian to organise my notes. I've been particularly impressed by its local-first philosophy and its focus on connections between notes rather than a traditional folder hierarchy.
+%%Link opportunity: I could link to "my use of obsidian" or something similar. and why I like obsidian. perhaps an obsidian post hub?%%
 
-One thing I wanted was a simple way to publish selected notes as a website directly from Obsidian, without maintaining two copies of the same content.
+One thing I wanted was a simple way to publish selected notes as a website directly from Obsidian, without maintaining two copies of the same content. This is how I made this blog:
 
-This is how I made this blog: **I write in Obsidian, run a single command, and the website is updated** while preserving the links and graph structure between notes.
+ > **I write in Obsidian, run a single command, and the website is updated** 
 
-I have a dedicated `Public/Quartz` folder which contains what's on the website. I can link my other private notes to my public notes and leverage my other Obsidian plugins (SmartConnection, etc.).
+I have a dedicated `Public/Quartz` folder which contains what's on the website. I can link my other private notes to my public notes and leverage my other Obsidian plugins (SmartConnection, etc.). 
 ## Obisidian -> `make publish` -> Website
 ![[_attachements/Pasted image 20260728163442.png]]
 

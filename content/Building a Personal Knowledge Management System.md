@@ -4,7 +4,7 @@ description: Stop archiving notes, start building knowledge. Four practical conc
 tags:
   - personal-knowledge-management
 date_created: 2026-08-03T16:52
-date_updated: 2026-08-03T19:36
+date_updated: 2026-08-03T19:45
 ---
 Traditional note taking quickly becomes just an archive. I've taken notes for years in random places that I never revisit. 
 I've realised that I wasn't building knowledge, I was storing information.

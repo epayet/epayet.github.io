@@ -1,12 +1,14 @@
 ---
 title: Benefits of using Quartz
 description: On my first post on how I made this website, I wrote about how I set up my Obsidian -> website pipeline. I thought I'd make a separate one about how cool Quartz is and how I configured it.
-tags: 
+tags:
   - engineering
   - obsidian
+date_created: 2026-07-29T11:07
+date_updated: 2026-08-06T15:34
 ---
 
-On my first post on [[How I made this website|How I made this website]], I wrote about how I set up my Obsidian -> website pipeline. I thought I'd make a separate one about how cool [Quartz](https://quartz.jzhao.xyz/) is and how I configured it.
+On my first post on [[How I turned a folder in my Obsidian vault into my website|How I turned a folder in my Obsidian vault into my website]], I wrote about how I set up my Obsidian -> website pipeline. I thought I'd make a separate one about how cool [Quartz](https://quartz.jzhao.xyz/) is and how I configured it.
 # Theme
 Quartz has quite a few community themes available. I chose Kanagawa because I like its colours, then customised it to better match the look I wanted.
 
@@ -31,7 +33,7 @@ tags:
 ---
 ```
 
-This is the og-image for the page [[How I made this website|How I made this website]]:
+This is the og-image for the page [[How I turned a folder in my Obsidian vault into my website|How I turned a folder in my Obsidian vault into my website]]:
 
 https://emmanuel-payet.me/how-i-made-this-website-og-image.webp:
 ![og-image](https://emmanuel-payet.me/how-i-made-this-website-og-image.webp)
@@ -49,6 +51,8 @@ For my website:
 They link to the tag pages thanks to the `tag-page` plugin (https://quartz.jzhao.xyz/plugins/tagpage). 
 
 Here's my tags page: https://emmanuel-payet.me/tags/
+## sitemap
+https://emmanuel-payet.me/sitemap.xml
 ## comments
 This was fairly easy to setup using giscus: https://quartz.jzhao.xyz/features/comments.
 It's enabled right now, see at the bottom of this page
