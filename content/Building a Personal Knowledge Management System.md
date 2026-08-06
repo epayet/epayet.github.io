@@ -1,13 +1,15 @@
 ---
 title: Building a Personal Knowledge Management System
-description: Stop archiving notes, start building knowledge. Four practical concepts behind a personal knowledge management system that evolves with you.
+description: Stop archiving notes, start building knowledge. Four practical concepts behind my personal knowledge management system that I use for learning.
 tags:
   - personal-knowledge-management
 date_created: 2026-08-03T16:52
-date_updated: 2026-08-03T19:45
+date_updated: 2026-08-06T19:48
 ---
 Traditional note taking quickly becomes just an archive. I've taken notes for years in random places that I never revisit. 
-I've realised that I wasn't building knowledge, I was storing information.
+I've realised that I wasn't building knowledge, I was storing information, and not necessarily learning.
+
+> Information is **input**. Knowledge is **output**.
 # What is Personal Knowledge Management?
 Lately, I've been getting into the concepts of digital gardening and personal knowledge management systems (PKMS).
 
@@ -41,11 +43,9 @@ A rough thought today might become a connected note next week and eventually gro
 
 Not everything I consume deserves a permanent place in my knowledge base.
 
-Books, blog posts, videos, podcasts and projects are **inputs**. Knowledge is the **output**. 
-
 My personal rule is simple: **I only save external information if it contributes to my personal knowledge in some way, either by supporting an existing idea or inspiring a new one**.
 
-Whenever I finish a project, a book, an article or a video, I write down what I learned and extract the ideas. Writing is how I learn best, this has been the case for years.
+Whenever I finish a project, a book, an article or a video, I write down what I learned and extract the ideas. Collecting information is easy. Turning it into something I understand well enough to explain in my own words is much harder—and that's where learning happens.
 ## Concept 3: Think in connections, not folders
 **All my Knowledge notes are just in 1 folder**.
 
@@ -105,7 +105,7 @@ It's surprisingly easy to spend hours perfecting a knowledge management system i
 
 I'm still experimenting, so I don't know what this system will look like in five years. Maybe some of these ideas will stick, and others will disappear. That's part of the process.
 
-What I do know is that **I've gone from collecting notes to actively developing ideas**, and that alone has made writing and learning far more enjoyable.
+I've created a personal knowledge system, but more importantly I'm building a system that helps me learn.
 
-In the next post, I'll walk through how I've implemented these ideas in Obsidian. Here's a preview:
+In the next post, I'll walk through how I've implemented these ideas in Obsidian. Here's a snapshot of a part of my Knowledge graph:
 ![[_attachements/Pasted image 20260803175602.png]]
