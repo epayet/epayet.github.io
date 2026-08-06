@@ -1,11 +1,12 @@
 ---
+draft: true
 title: How I use Obsidian to build knowledge
 description: An overview of my Obsidian workflow for capturing ideas, growing knowledge, connecting notes, and maintaining a personal knowledge management system.
 tags:
   - personal-knowledge-management
   - obsidian
 date_created: 2026-08-04T15:51
-date_updated: 2026-08-05T20:57
+date_updated: 2026-08-06T15:35
 ---
 In my previous post, I established the principles that I'm following when building and managing my Personal Knowledge Management System (PKMS): [[Building a Personal Knowledge Management System|Building a Personal Knowledge Management System]]. 
 
