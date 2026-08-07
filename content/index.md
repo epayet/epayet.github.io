@@ -3,7 +3,7 @@ title: Mani's blog
 description: "I like and think a lot about: Software, People (management), Leadership, Personal Knowledge Management & Digital Gardens, AI and its impact, Kung Fu, Metal music (I play bass), Video games. I may or may not write about the topics above."
 comments: false
 date_created: 2026-07-27T17:17
-date_updated: 2026-08-06T19:52
+date_updated: 2026-08-07T09:33
 ---
 
 Hi. My name is Emmanuel Payet (otherwise known as Mani or Manu) and I am a software engineer.

@@ -5,7 +5,7 @@ tags:
   - engineering
   - obsidian
 date_created: 2026-07-28T14:48
-date_updated: 2026-08-06T15:33
+date_updated: 2026-08-06T20:01
 ---
 I recently started using Obsidian to organise my notes. I've been particularly impressed by its local-first philosophy and its focus on connections between notes rather than a traditional folder hierarchy.
 %%Link opportunity: I could link to "my use of obsidian" or something similar. and why I like obsidian. perhaps an obsidian post hub?%%

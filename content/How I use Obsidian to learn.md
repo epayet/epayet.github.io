@@ -5,7 +5,7 @@ tags:
   - personal-knowledge-management
   - obsidian
 date_created: 2026-08-04T15:51
-date_updated: 2026-08-06T19:49
+date_updated: 2026-08-07T10:21
 ---
 In my previous post, I established the principles that I'm following when building and managing my Personal Knowledge Management System (PKMS): [[Building a Personal Knowledge Management System|Building a Personal Knowledge Management System]]. 
 
@@ -24,26 +24,7 @@ I'm only at the beginning of this PKMS journey, but what's interesting is that i
 %%**Future reading**: *From Information to Connected Knowledge - a walkthrough*%%
 # Knowledge workflow
 Most ideas and pieces of information flow through my system in roughly this way:
-```
-Capture
-(Get ideas and information into the system)
-        ↓
-Grow
-(Turn information into knowledge)
-        ↓
-Connect
-(Build relationships between Knowledge)
-        ↓
-Sustain
-(Keep the system alive and growing)
-        ↺
-```
-I wanted to make this post more engaging with images so here's a quick AI generated version:
-<figure> 
-	<img src="./_attachements/Pasted image 20260806154115.png" alt="Knowledge lifecycle" width="700"/> 
-	<figcaption>Knowledge lifecycle - ChatGPT</figcaption>
-</figure>
-
+![[_attachements/Pasted image 20260807102135.png]]
 ## Capture
 **Principle**: Capture first, organise later.
 
