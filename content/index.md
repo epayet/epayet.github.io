@@ -1,22 +1,23 @@
 ---
 title: Mani's blog
-description: "I like and think a lot about: Software, People (management), Leadership, Personal Knowledge Management & Digital Gardens, AI and its impact, Kung Fu, Metal music (I play bass), Video games. I may or may not write about the topics above."
+description: "My name is Emmanuel (Mani/Manu). I like and think a lot about: Software, People, Leadership, Mental health, Learning & Writing, Kung Fu, Metal music and Video games. I sometimes write about those."
 comments: false
 date_created: 2026-07-27T17:17
-date_updated: 2026-08-07T09:33
+date_updated: 2026-08-07T11:14
 ---
 
-Hi. My name is Emmanuel Payet (otherwise known as Mani or Manu) and I am a software engineer.
+Hi. My name is Emmanuel Payet (otherwise known as Mani or Manu) and I am a software engineer at heart. 
 
 I like and think a lot about:
 - Software
 - People (management)
 - Leadership
-- Personal Knowledge Management & Digital Gardens
-- AI and its impact
-- Kung Fu
+- Learning & Writing
+- Martial arts (I practice Kung Fu)
 - Metal music (I play bass)
 - Video games
+
+I sometimes write about those topics. [See all posts by tags](https://emmanuel-payet.me/tags).
 
 ---
 
@@ -35,10 +36,6 @@ I then started overthinking how I approach learning and the benefits of writing.
 
 - Principles: [[Building a Personal Knowledge Management System|Building a Personal Knowledge Management System]]
 - Implementation: [[How I use Obsidian to learn|How I use Obsidian to learn]]
-# All posts by tags
-https://emmanuel-payet.me/tags
-# RSS feed
-https://emmanuel-payet.me/index.xml
 
 ---
 
