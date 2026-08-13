@@ -6,7 +6,7 @@ tags:
   - engineering
   - obsidian
 date_created: 2026-07-28T14:48
-date_updated: 2026-08-13T16:15
+date_updated: 2026-08-13T16:27
 ---
 I recently started using Obsidian to organise my notes. I've been particularly impressed by its local-first philosophy and its focus on connections between notes rather than a traditional folder hierarchy.
 %%Link opportunity: I could link to "my use of obsidian" or something similar. and why I like obsidian. perhaps an obsidian post hub?%%
@@ -82,6 +82,9 @@ See the Quartz showcase with more examples: https://quartz.jzhao.xyz/showcase
 There are still plenty of Quartz features I haven't enabled yet—search, analytics, comments, and more—but those can wait. 
 
 The important part is that I now have a publishing workflow I'm happy with, and this is the first post created with it.
+
+---
+I've now become aware of the existence of this Obsidian plugin, which could allow controlling the deployment from Obsidian itself: https://community.obsidian.md/plugins/quartz-syncer
 
 I have now made my second post as I've decided to split and write more about Quartz itself: 
 
