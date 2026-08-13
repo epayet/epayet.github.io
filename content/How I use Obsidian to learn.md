@@ -5,7 +5,7 @@ tags:
   - personal-knowledge-management
   - obsidian
 date_created: 2026-08-04T15:51
-date_updated: 2026-08-07T10:21
+date_updated: 2026-08-10T22:21
 ---
 In my previous post, I established the principles that I'm following when building and managing my Personal Knowledge Management System (PKMS): [[Building a Personal Knowledge Management System|Building a Personal Knowledge Management System]]. 
 
@@ -73,7 +73,7 @@ Knowledge
 Projects / Public writing
 ```
 
-Small, individual knowledge notes have limited valuable on their own. The next-level value comes from the connections they have with everything else I know.
+Small, individual knowledge notes have limited value on their own. The next-level value comes from the connections they have with everything else I know.
 
 %%
 **Future reading**: 
@@ -111,9 +111,9 @@ I've realised that maintenance only happens if I'm motivated to open my vault in
 **Future reading**: *My future-proof Obsidian home page*
 %%
 # Closing thoughts
-Building this system has also made me question whether I'm overengineering learning and thinking. I probably am. 
+Building this system made me wonder if I'm overengineering learning and thinking. I probably am. 
 
-People often say that teaching is learning twice. Writing this series of posts had a similar effect here. Explaining how my knowledge system works forced me to deconstruct it into smaller pieces, and discover more about how I think.
+People often say that teaching is learning twice. Writing this series of posts had a similar effect: explaining how my knowledge system works forced me to deconstruct it into smaller pieces, and discover more about how I think.
 
 > **Making something clearer for other people also makes it clearer for yourself.**
 

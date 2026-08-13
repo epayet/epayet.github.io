@@ -1,11 +1,12 @@
 ---
+alias: how-i-made-this-website
 title: How I turned a folder in my Obsidian vault into my website
 description: I explain how I turned a folder in my Obsidian vault into a website with a simple command, while preserving the links and graph structure.
 tags:
   - engineering
   - obsidian
 date_created: 2026-07-28T14:48
-date_updated: 2026-08-06T20:01
+date_updated: 2026-08-13T16:15
 ---
 I recently started using Obsidian to organise my notes. I've been particularly impressed by its local-first philosophy and its focus on connections between notes rather than a traditional folder hierarchy.
 %%Link opportunity: I could link to "my use of obsidian" or something similar. and why I like obsidian. perhaps an obsidian post hub?%%

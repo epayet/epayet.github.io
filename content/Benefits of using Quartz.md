@@ -5,7 +5,7 @@ tags:
   - engineering
   - obsidian
 date_created: 2026-07-29T11:07
-date_updated: 2026-08-06T15:34
+date_updated: 2026-08-13T16:15
 ---
 
 On my first post on [[How I turned a folder in my Obsidian vault into my website|How I turned a folder in my Obsidian vault into my website]], I wrote about how I set up my Obsidian -> website pipeline. I thought I'd make a separate one about how cool [Quartz](https://quartz.jzhao.xyz/) is and how I configured it.
@@ -35,8 +35,8 @@ tags:
 
 This is the og-image for the page [[How I turned a folder in my Obsidian vault into my website|How I turned a folder in my Obsidian vault into my website]]:
 
-https://emmanuel-payet.me/how-i-made-this-website-og-image.webp:
-![og-image](https://emmanuel-payet.me/how-i-made-this-website-og-image.webp)
+https://emmanuel-payet.me/how-i-turned-a-folder-in-my-obsidian-vault-into-my-website-og-image.webp:
+![og-image](https://emmanuel-payet.me/how-i-turned-a-folder-in-my-obsidian-vault-into-my-website-og-image.webp)
 ## frontmatter
 Speaking of frontmatter, this is all the supported fields: https://quartz.jzhao.xyz/plugins/frontmatter
 ## content-index
